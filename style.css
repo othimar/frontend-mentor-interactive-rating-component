@@ -1,0 +1,155 @@
+:root {
+    font-family: 'Overpass', sans-serif;
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsla(216, 12%, 54%, 0.11);
+    --dark-blue: hsla(213, 20%, 18%, 0.349);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+}
+
+p {
+    font-size: 15px;
+    color: var(--light-grey);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+}
+
+main {
+    flex-grow: 1;
+    justify-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+footer {
+    justify-self: flex-end;
+}
+
+
+.card-component {
+    padding: 30px;
+    background-color: var(--dark-blue);
+    border-radius: 22px;
+
+    position: relative;
+}
+
+.star-icon {
+    background-color: var(--medium-grey);
+    display: inline-block;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.star-icon img {
+    display: block;
+}
+
+h1,
+h2 {
+    color: var(--white);
+    font-size: 26px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+#rates-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.rate {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: var(--light-grey);
+    background-color: var(--medium-grey);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.rate:hover {
+    color: white;
+    background-color: var(--orange);
+    cursor: pointer;
+}
+
+.selected {
+    background-color: hsl(218, 16%, 71%);
+    color: var(--white);
+}
+
+#submit {
+    background-color: var(--orange);
+    border: none;
+    width: 100%;
+    padding: 8px;
+    color: var(--white);
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius: 18px;
+}
+
+#submit:hover{
+    color: var(--orange);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+#last-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 30px;
+}
+
+.result {
+    color: var(--orange);
+    background-color: var(--medium-grey);
+    padding: 12px;
+    border-radius: 16px;
+    margin: 20px;
+    font-size: 14px;
+}
+#last-page p{
+    text-align: center;
+}
+.hidden {
+    visibility: hidden;
+}
+
+@media (min-width:375px) {
+    .card-component {
+        max-width: 350px;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--orange);
+}
+
+.attribution a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
